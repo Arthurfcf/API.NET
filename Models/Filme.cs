@@ -14,7 +14,7 @@ namespace FilmesAPIs.Models
         public string Diretor { get; set; }
         [StringLength(30,ErrorMessage = "O genero não pode passar de 10 caracteres")]
         public string Genero { get; set; }
-        [ Range(1,1800, ErrorMessage = "A duração  é entre zero e 1800s")]
+        [ Range(1,1800, ErrorMessage = "A duração  é entre 1 e 1800s")]
         public int Duracao { get; set; }
         public int Id { get; set; }
     }
