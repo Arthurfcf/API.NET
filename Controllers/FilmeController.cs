@@ -47,6 +47,15 @@ namespace FilmesAPIs.Controllers
             Filme filme = _context.Filmes.FirstOrDefault(Filme => Filme.Id == id);
             if (filme != null)
             {
+                ListaFilmesDto filmesDto = new ListaFilmesDto
+                {
+                    Titulo = filme.Titulo,
+                    Diretor = filme.Diretor,
+                    Duracao = filme.Duracao,
+                    id = filme.Id,
+                    Genero = filme.Genero,
+                    HoraConsulta = DateTime.Now
+                };
                 return Ok(filme);
             }
             return NotFound();
